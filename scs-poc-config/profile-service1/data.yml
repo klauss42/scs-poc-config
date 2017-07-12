@@ -1,0 +1,3 @@
+server:
+  context-path: /profile-service1
+  port: 9008

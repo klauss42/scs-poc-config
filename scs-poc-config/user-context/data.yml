@@ -1,0 +1,7 @@
+server:
+  context-path: /usercontext
+  port: 9007
+
+redis:
+  host: "localhost"
+  port: 6379

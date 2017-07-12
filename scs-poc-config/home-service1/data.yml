@@ -1,0 +1,3 @@
+server:
+  context-path: /home-service1
+  port: 9011

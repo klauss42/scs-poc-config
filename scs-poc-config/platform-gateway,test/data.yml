@@ -1,0 +1,7 @@
+zuul:
+  routes:
+    shop-ui:
+      path: /shop-ui/**
+      url: http://shop-ui:80
+      stripPrefix: false
+      sensitiveHeaders:

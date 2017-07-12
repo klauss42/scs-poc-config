@@ -1,0 +1,3 @@
+server:
+  context-path: /shared-framing
+  port: 9006

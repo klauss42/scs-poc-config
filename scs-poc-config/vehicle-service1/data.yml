@@ -1,0 +1,3 @@
+server:
+  context-path: /vehicle-service1
+  port: 9004

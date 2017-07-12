@@ -1,0 +1,15 @@
+scspoc:
+  ps-engine:
+    url: http://node1-olichr1.x-temp.ham2.szops.net:9102/recommender
+  ps-signaltracker:
+    url: http://node1-olichr1.x-temp.ham2.szops.net:9100/signaltracker/st
+
+spring:
+  zipkin:
+    enabled: true
+
+logging:
+  path: /var/log
+
+graphite:
+  enabled: true

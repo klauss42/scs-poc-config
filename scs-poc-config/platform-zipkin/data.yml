@@ -1,0 +1,4 @@
+server:
+  # context path not working with Zipkin UI
+  # context-path: /zipkin
+  port: 9411

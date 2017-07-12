@@ -1,0 +1,3 @@
+server:
+  context-path: /connect-ui
+  port: 9001

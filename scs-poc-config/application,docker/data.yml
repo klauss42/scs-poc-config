@@ -1,0 +1,9 @@
+scspoc:
+  ps-engine:
+    url: http://ps-engine:8081/ps-engine
+
+logging:
+  path: /var/log
+
+graphite:
+  enabled: true

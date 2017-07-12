@@ -1,0 +1,3 @@
+server:
+  context-path: /profile-ui
+  port: 9009

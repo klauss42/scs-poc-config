@@ -1,0 +1,3 @@
+server:
+  context-path: /vehicle-ui
+  port: 9003

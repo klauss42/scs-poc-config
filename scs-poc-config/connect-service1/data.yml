@@ -1,0 +1,3 @@
+server:
+  context-path: /connect-service1
+  port: 9002

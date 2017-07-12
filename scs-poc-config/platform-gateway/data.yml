@@ -1,0 +1,70 @@
+zuul:
+  # workaround to fix redirect problems when running behind a proxy (Zuul): Set Host header
+  # see https://github.com/spring-cloud/spring-cloud-netflix/issues/1108
+  addHostHeader: true
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    shared-framing:
+      path: /shared-framing/**
+      stripPrefix: false
+      # important to clear the sensitiveHeaders, otherwise cookies would not be sent to services
+      sensitiveHeaders:
+    connect-ui:
+      path: /connect-ui/**
+      stripPrefix: false
+      sensitiveHeaders:
+    connect-service1:
+      path: /connect-service1/**
+      stripPrefix: false
+      sensitiveHeaders:
+    vehicle-ui:
+      path: /vehicle-ui/**
+      stripPrefix: false
+      sensitiveHeaders:
+    vehicle-service1:
+      path: /vehicle-service1/**
+      stripPrefix: false
+      sensitiveHeaders:
+    shop-ui:
+      path: /shop-ui/**
+      url: http://localhost:9005
+      stripPrefix: false
+      sensitiveHeaders:
+    home-ui:
+      path: /home-ui/**
+      stripPrefix: false
+      sensitiveHeaders:
+    home-service1:
+      path: /home-service1/**
+      stripPrefix: false
+      sensitiveHeaders:
+    home-beats-render-service:
+      path: /home-beat-render-service/**
+      stripPrefix: false
+      sensitiveHeaders:
+    profile-ui:
+      path: /profile-ui/**
+      stripPrefix: false
+      sensitiveHeaders:
+    profile-service1:
+      path: /profile-service1/**
+      stripPrefix: false
+      sensitiveHeaders:
+    user-context:
+      path: /usercontext/**
+      stripPrefix: false
+      sensitiveHeaders:
+
+server:
+  #context-path: /
+  port: 4000
+
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000

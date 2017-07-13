@@ -45,7 +45,7 @@ spring:
     resource:
       userInfoUri: http://${AUTH_HOST:localhost}:8888/auth/user
   zipkin:
-    enabled: false
+    enabled: true
     baseUrl: http://${ZIPKIN_HOST:localhost}:9411
   sleuth:
     sampler:
